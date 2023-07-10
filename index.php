@@ -20,11 +20,12 @@
             
         }
 
-
+        // inseriamo la funzione che comporrà i movies
         public function getDateMovies(){
+            // inseriamo una variabile che conterrà gli elementi che conterra l'oggetto 
             $stringMovie = 'movie: '.$this->title.'</br> year: '.$this->years.'</br> genre: ' . $this->genre.'</br> rate: '.$this->rating.'</br> lenght_song: '.$this->lenght_song.'min </br></br>';
 
-
+            // ci ritorna la variabile 
             return $stringMovie;
         }
     }
