@@ -22,7 +22,7 @@
 
 
         public function getDateMovies(){
-            $stringMovie = 'movie: '.$this->title.' year: '.$this->years.' genre:' . $this->genre.' rate: '.$this->rating.' lenght_song: '.$this->lenght_song.'min';
+            $stringMovie = 'movie: '.$this->title.'</br> year: '.$this->years.'</br> genre: ' . $this->genre.'</br> rate: '.$this->rating.'</br> lenght_song: '.$this->lenght_song.'min </br></br>';
 
 
             return $stringMovie;
@@ -31,8 +31,12 @@
 
 
     // inseriamo le instanze della classe
-    $It_The_Clown = new Movie ('it the Clown', 2020 , 'Horror', 4 , 210);
+    $It_The_Clown = new Movie ('IT-the Clown', 2020 , 'Horror', 4 , 210,);
+    $Dark = new Movie ('Dark', 2018 , 'Horror', 3 , 250);
+
+    // stampoamo a schermo i due ogetti
     echo( $It_The_Clown ->getDateMovies());
+    echo( $Dark ->getDateMovies());
 
 
 ?>
