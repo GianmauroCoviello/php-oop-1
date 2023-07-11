@@ -1,4 +1,16 @@
 <?php
+    // aggiungiamo la classe genre
+    class Genre {
+        // inserimento dei suoi dati
+        public $name;
+
+
+        public function __construct($name){
+            $this -> name = $name;
+            
+        }
+
+    }
 
     // qui verranno inseriti gli oggetti con le instanze
     // inserita la classe Movie
@@ -22,8 +34,8 @@
 
         // inseriamo la funzione che comporrà i movies
         public function getDateMovies(){
-            // inseriamo una variabile che conterrà gli elementi che conterra l'oggetto 
-            $stringMovie = 'movie: '.$this->title.'</br> year: '.$this->years.'</br> genre: ' . $this->genre.'</br> rate: '.$this->rating.'</br> lenght_song: '.$this->lenght_song.'min </br></br>';
+            // inseriamo una variabile che conterrà gli elementi che conterra l'oggetto e al parametro genre incrementarlo inserendo il para,metro della classe Genre
+            $stringMovie = 'movie: '.$this->title.'</br> year: '.$this->years.'</br> genre: ' . $this->genre->name.'</br> rate: '.$this->rating.'</br> lenght_song: '.$this->lenght_song.'min </br></br>';
 
             // ci ritorna la variabile 
             return $stringMovie;
@@ -32,8 +44,8 @@
 
 
     // inseriamo le instanze della classe
-    $It_The_Clown = new Movie ('IT-the Clown', 2020 , 'Horror', 4 , 210,);
-    $Dark = new Movie ('Dark', 2018 , 'Horror', 3 , 250);
+    $It_The_Clown = new Movie ('IT-the Clown', 2020 , new Genre('Horror'), 4 , 210,);
+    $Dark = new Movie ('Dark', 2018 , new Genre('Thriller'), 3 , 250);
 
     // stampoamo a schermo i due ogetti
     echo( $It_The_Clown ->getDateMovies());
